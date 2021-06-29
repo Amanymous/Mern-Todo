@@ -1,3 +1,7 @@
+
+#npm i -g react-scripts
+if not work try this command 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
