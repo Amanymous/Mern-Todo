@@ -8,14 +8,23 @@ const {errorHandler,notFound} = require("./middleware/errorMiddleware")
 
 
 dotenv.config()
+// loads environment variables
+
 connectDB()
+// for mongodb connection
 
 const app = express()
 
 app.use(express.json())
+// accept json data
+
 
 app.use("/api/users", userRoutes);
+// user authentication
+
 app.use("/api/notes", noteRoutes);
+// notes route
+
 // app.use("/api/notes/create", noteRoutes);
 
 app.get("/",(req,res)=>{
@@ -26,6 +35,7 @@ app.get("/",(req,res)=>{
 //     res.send(notes)
 // })
 
+// for error handling middleware
 app.use(notFound)
 app.use(errorHandler)
 

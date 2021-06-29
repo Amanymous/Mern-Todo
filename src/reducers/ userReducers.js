@@ -10,8 +10,11 @@ import {
     USER_UPDATE_REQUEST,
     USER_UPDATE_SUCCESS,
   } from "../constants/userConstants";
+
+//  determines changes to an application's state 
+// user authentication reducers
   
-  export const userLoginReducer = (state = {}, action) => {
+export const userLoginReducer = (state = {}, action) => {
     switch (action.type) {
       case USER_LOGIN_REQUEST:
         return { loading: true };

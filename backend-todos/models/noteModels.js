@@ -1,5 +1,7 @@
 const mongoose = require("mongoose")
 
+//  defines a property in our documents which will be cast to its associated SchemaType
+
 const noteSchema = mongoose.Schema(
     {
       title: {

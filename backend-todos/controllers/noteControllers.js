@@ -1,14 +1,17 @@
 const Note = require("../models/noteModels");
 const asyncHandler = require("express-async-handler");
 
+// asyncHandler provide you Async Error Handling Middleware for Express
+
+// get {{URL}}/api/notes request login for user notes
 const getNotes = asyncHandler(async (req, res) => {
     const notes = await Note.find(
-        // { user: req.user._id }
+        { user: req.user._id }
         );
     res.json(notes);
 });
   
-
+// get {{URL}}/api/notes/:id it helps us to fetch single note
 const getNoteById = asyncHandler(async (req, res) => {
     const note = await Note.findById(req.params.id);
   
@@ -22,6 +25,7 @@ const getNoteById = asyncHandler(async (req, res) => {
 });
   
 
+// get {{URL}}/api/notes/create it helps to create notes
 const CreateNote = asyncHandler(async (req, res) => {
     const { title, content, category } = req.body;
   
@@ -38,7 +42,7 @@ const CreateNote = asyncHandler(async (req, res) => {
     }
 });
   
-
+// get {{URL}}/api/notes/:id it helps to delete the notes
 const DeleteNote = asyncHandler(async (req, res) => {
     const note = await Note.findById(req.params.id);
   
@@ -56,7 +60,7 @@ const DeleteNote = asyncHandler(async (req, res) => {
     }
 });
   
-
+// put {{URL}}/api/notes/:id it helps to update the created note
 const UpdateNote = asyncHandler(async (req, res) => {
     const { title, content, category } = req.body;
   

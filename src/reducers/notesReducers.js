@@ -13,7 +13,9 @@ import {
     NOTES_LIST_SUCCESS,
   } from "../constants/notesConstants";
   
-  export const noteListReducer = (state = { notes: [] }, action) => {
+// for crud  determines changes to an application's state
+
+export const noteListReducer = (state = { notes: [] }, action) => {
     switch (action.type) {
       case NOTES_LIST_REQUEST:
         return { loading: true };

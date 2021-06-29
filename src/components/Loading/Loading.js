@@ -1,6 +1,8 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 
+// for loading spinner for authentication and crud function
+
 function Loading({ size = 100 }) {
   return (
     <div

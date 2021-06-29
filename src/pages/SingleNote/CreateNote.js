@@ -19,12 +19,13 @@ function CreateNote({ history }) {
 
   console.log(note);
 
+  // it reset your info
   const resetHandler = () => {
     setTitle("");
     setCategory("");
     setContent("");
   };
-
+// for submitting your info of notes
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(createNoteAction(title, content, category));
@@ -32,6 +33,7 @@ function CreateNote({ history }) {
 
     resetHandler();
     history.push("/mynotes");
+    // for state - (object) location-specific state
   };
 
   useEffect(() => {}, []);

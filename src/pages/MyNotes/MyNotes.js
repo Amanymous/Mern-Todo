@@ -10,6 +10,8 @@ import Loading from "../../components/Loading/Loading";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 // import notes from './notes'
 
+// main page crud function including search bar
+
 function MyNotes({ history, search }) {
     const dispatch = useDispatch();
   
