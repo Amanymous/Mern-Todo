@@ -11,11 +11,16 @@ import {
     USER_UPDATE_SUCCESS,
   } from "../constants/userConstants";
 import axios from "axios";
+
+// axios is a promise based HTTP client
+// send asynchronous HTTP requests to REST 
+// endpoints and perform CRUD operations
+// for login,register,logout and update profile actions
   
 export const login = (email, password) => async (dispatch) => {
     try {
       dispatch({ type: USER_LOGIN_REQUEST });
-  
+  // put env-specific config into the externals field 
       const config = {
         headers: {
           "Content-type": "application/json",

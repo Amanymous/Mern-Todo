@@ -1,3 +1,6 @@
+// for common convention that actions have a constant type that helps reducer
+// for crud constants
+
 export const NOTES_LIST_REQUEST = "NOTES_LIST_REQUEST";
 export const NOTES_LIST_SUCCESS = "NOTES_LIST_SUCCESS";
 export const NOTES_LIST_FAIL = "NOTES_LIST_FAIL";

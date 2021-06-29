@@ -13,8 +13,15 @@ import {
     NOTES_UPDATE_SUCCESS,
   } from "../constants/notesConstants";
   import axios from "axios";
-  
-  export const listNotes = () => async (dispatch, getState) => {
+
+
+//  action that causes an update to the state when something happens
+
+//  dispatch actions, update the state by calling the root reducer
+// Middleware also have access to dispatch and getState .
+// All crud function actions
+
+export const listNotes = () => async (dispatch, getState) => {
     try {
       dispatch({
         type: NOTES_LIST_REQUEST,

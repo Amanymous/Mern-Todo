@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "../styles.css";
 
+// main page heading 
 function MainPage({ children, title }) {
   return (
     <div className="mainback">

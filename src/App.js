@@ -15,6 +15,8 @@ import './App.css';
 function App() {
   const [search, setSearch] = useState("");
   return (
+    // Router enables the navigation among views of various components
+
     <Router>
     <Header setSearch={(s) => setSearch(s)} />
     <main className="App">

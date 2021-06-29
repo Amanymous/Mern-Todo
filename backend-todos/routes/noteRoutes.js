@@ -9,6 +9,8 @@ const {
     UpdateNote,
   } = require("../controllers/noteControllers")
 
+// all crud operation routes
+
 router.route("/").get(protect,getNotes);
 router.route("/create").post(protect, CreateNote);
 router

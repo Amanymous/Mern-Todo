@@ -27,6 +27,7 @@ function Register({ history }) {
     // const userRegister = useSelector((state) => state.userRegister);
     // const { loading, error, userInfo } = userRegister;
   
+    //for uploading pic function 
     const postDetails = (pics) => {
       if (
         pics ===

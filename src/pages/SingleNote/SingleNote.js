@@ -9,6 +9,7 @@ import Loading from "../../components/Loading/Loading";
 import ReactMarkdown from "react-markdown";
 
 function SingleNote({ match, history }) {
+  // crud function of single note
   const [title, setTitle] = useState();
   const [content, setContent] = useState();
   const [category, setCategory] = useState();
@@ -29,6 +30,7 @@ function SingleNote({ match, history }) {
     history.push("/mynotes");
   };
 
+  // for fetching function identity is stable and won't change on re-​renders
   useEffect(() => {
     const fetching = async () => {
       const { data } = await axios.get(`/api/notes/${match.params.id}`);
@@ -41,6 +43,7 @@ function SingleNote({ match, history }) {
 
     fetching();
   }, [match.params.id, date]);
+  // match object contains information about route
 
   const resetHandler = () => {
     setTitle("");

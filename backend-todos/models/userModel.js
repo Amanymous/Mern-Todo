@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
+// bcrypt is a password-hashing function for securing your id
 
+//  defines a property in our documents which will be cast to its associated SchemaType
 const userSchema = mongoose.Schema(
     {
       name: {

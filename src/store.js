@@ -22,15 +22,18 @@ const reducer = combineReducers({
     noteUpdate: noteUpdateReducer,
     userUpdate: userUpdateReducer,
   });
-  
+ 
+// use store.subscribe() to efficiently persist some of the app's state to localStorage
+
   const userInfoFromStorage = localStorage.getItem("userInfo")
     ? JSON.parse(localStorage.getItem("userInfo"))
     : null;
-  
+
+// initialState is populated using preloadedState will still need to provide a default value 
   const initialState = {
     userLogin: { userInfo: userInfoFromStorage },
   };
-  
+// Redux Thunk middleware allows you to write action creators
   const middleware = [thunk];
   
   const store = createStore(
@@ -38,6 +41,8 @@ const reducer = combineReducers({
     initialState,
     composeWithDevTools(applyMiddleware(...middleware))
   );
-  
+// composeWithDevTools power-up Redux development workflow
+
+// store brings together the state, actions, and reducers that make up your app
 export default store;
   
